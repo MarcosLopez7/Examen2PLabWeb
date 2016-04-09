@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</head>
+<body>
+
+<% include templates/nav.ejs %>
+
+<h1 class="page-header">Registro</h1>
+
+<%if (errores){%>
+    <%for (var i = 0; i < errores.length; i++) {%>
+        <div class="alert alert-danger"><%= errores[i].msg%></div>
+    <%}%>
+<%}%>
+
+<form method="post" action="/registro">
+    <div class="form-group">
+    <label>Nombre: </label> <input type="text" class="form-control" name="nombre"><br>
+    </div>
+    <div class="form-group">
+    <label>Apellido Paterno: </label><input type="text" class="form-control" name="ap1"><br>
+    </div>
+        <div class="form-group">
+        <label>Apellido Materno: </label> <input type="text" class="form-control" name="ap2"><br>
+        </div>
+            <div class="form-group">
+    <label>Fecha de nacimiento: </label> <input type="date" name="fecha"><br>
+            </div>
+                <div class="form-group">
+    <label>Genero: </label> <select name="gen" class="form-control"><option>Femenino</option><option>Masculino</option></select><br>
+                </div>
+                    <div class="form-group">
+    <label>Número celular: </label> <input type="text" class="form-control" name="cel"><br>
+                    </div>
+                        <div class="form-group">
+    <label>Número Fijo: </label> <input type="text" class="form-control" name="tel"><br>
+                        </div>
+                            <div class="form-group">
+    <label>Extensión: </label> <input type="text" class="form-control" name="ext"><br>
+                            </div>
+                                <div class="form-group">
+    <label>Email: </label> <input type="text"  class="form-control" name="email"><br>
+                                </div>
+                                    <div class="form-group">
+    <label>Password: </label> <input type="password" class="form-control" name="pass"><br>
+                                    </div>
+    <button type="submit">submit</button>
+</form>
+
+</body>
+</html>

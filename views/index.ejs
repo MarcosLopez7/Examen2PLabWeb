@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+  </head>
+  <body>
+
+    <% include templates/nav.ejs %>
+
+    <%if (guardado){%>
+      <br>
+      <div class="alert alert-success">Registro guardado</div>
+    <%}%>
+
+    <div class="bs-docs-section">
+      <h1 id="history" class="page-header"><%= title %></h1>
+      <p class="lead">
+        Existe un segmento del Mercado Gamer que experimenta un dolor en el Mercado: hay incertidumbre por parte del
+        consumidor hacia los sitios web que realizan las reviews de los juegos y por lo tanto dificulta la toma de
+        decisiones a la hora de realizar una compra con un presupuesto determinado.
+
+        Como respuesta a este problema proponemos crear un sistema gratuito de recomendaciones inteligentes de videojuegos
+        basado en las reseñas que dejan tus amigos, los Tweets de positivos o negativos de otros gamers en el mundo.
+
+        Como respuesta a este problema proponemos crear un sistema gratuito de recomendaciones inteligentes de
+        videojuegos basado en las reseñas que dejan tus amigos, los Tweets de positivos o negativos de otros gamers en
+        el mundo.
+
+      </p>
+
+      <img src="http://ubiquitous.csf.itesm.mx/~pddm-1018739/Ldaw/examen_Ldaw/www/images/darksouls3.png" width="650"
+           height="400" />
+
+      </div>
+  </body>
+</html>

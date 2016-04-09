@@ -1,0 +1,12 @@
+<header>
+    <nav>
+        <a href="/">Home</a> |
+        <% if (session == null) {%>
+            <a href="/login">Login</a> |
+            <a href="/registro">Registrar</a>
+        <%} else {%>
+            <a href="/logout">Logout</a> |
+            <a href="/informacion">Información</a>
+        <%}%>
+    </nav>
+</header>
